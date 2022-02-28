@@ -2,8 +2,8 @@
  * Created by: Akram Taghavi-Burrs
  * Date Created: Feb 23, 2022
  * 
- * Last Edited by: NA
- * Last Edited: Feb 23, 2022
+ * Last Edited by: Cristian Misla
+ * Last Edited: Feb 27, 2022
  * 
  * Description: Basic GameManager Template
 ****/
@@ -54,8 +54,8 @@ public class GameManager : MonoBehaviour
     public bool recordHighScore = false; //is the High Score recorded
 
     [SerializeField] //Access to private variables in editor
-    private int defaultHighScore = 1000;
-    static public int highScore = 1000; // the default High Score
+    private int defaultHighScore = 0;
+    static public int highScore = 0; // the default High Score
     public int HighScore { get { return highScore; } set { highScore = value; } }//access to private variable highScore [get/set methods]
 
     [Space(10)]
