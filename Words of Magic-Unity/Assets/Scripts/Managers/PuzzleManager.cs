@@ -3,7 +3,7 @@
  * Date Created: Feb 28, 2022
  * 
  * Last Edited by: Cristian Misla
- * Last Edited: Feb 28, 2022
+ * Last Edited: Mar 2, 2022
  * 
  * Description: Puzzle GameManager
 ****/
@@ -16,8 +16,17 @@ using UnityEngine.UI;
 public class PuzzleManager : MonoBehaviour
 {
     public GameObject FL_List_1;
-
-
+    public GameObject Numbering;
+    public InputField playerNameInput;
+    public GameObject Cam1;
+    public GameObject Cam2;
+    public GameObject Cam3;
+    public GameObject Rocks;
+    public GameObject MovementBt;
+    public bool completed_One = false;
+    [HideInInspector]
+    public string playerName;
+    
     public void Pan()
     {
         if (FL_List_1.activeSelf)
@@ -29,17 +38,58 @@ public class PuzzleManager : MonoBehaviour
             FL_List_1.SetActive(true);
         }
     }
+    public void Numb()
+    {
+        if (Numbering.activeSelf)
+        {
+            Numbering.SetActive(false);
+        }
+        else
+        {
+            Numbering.SetActive(true);
+        }
+    }
 
-    // Start is called before the first frame update
+
+
+    public void SetInput()
+    {
+        playerName = playerNameInput.text;
+        Floor();
+    }
+
+    public void Floor()
+    {
+        if (Cam1.activeInHierarchy && playerName == "Gall" || playerName == "gall")
+        {
+            Destroy(Rocks);
+            playerNameInput.text = "";
+            MovementBt.SetActive(true);
+            completed_One = true;
+            Debug.Log("Puzzle one is Completed");
+        }
+    }
+
+    public void RoomMove()
+    {
+        if (Cam1.activeSelf)
+        {
+            Cam1.SetActive(false);
+            Cam2.SetActive(true);
+        }
+        else 
+        {
+            Cam1.SetActive(true);
+            Cam2.SetActive(false);
+        }
+    }
+
     void Start()
     {
-        
-        
+        Cam1.SetActive(true);
+        Cam2.SetActive(false);
+        Cam3.SetActive(false);
     }
     
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }
