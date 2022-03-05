@@ -5,11 +5,23 @@ using UnityEngine.UI;
 public class CollectingObject : MonoBehaviour
 {
     public GameObject FirstPageFLBt;
-
-    // Start is called before the first frame update
-    void Start()
+    public GameObject ObjectPoint;
+    void Awake()
     {
-        
+        Transform launchPointTrans = transform.Find("ObjectPoint");
+        ObjectPoint = launchPointTrans.gameObject;    
+        ObjectPoint.SetActive(false);                                         
+    }
+    public void OnMouseEnter()
+    {
+        //print("Slingshot:OnMouseEnter()");
+        ObjectPoint.SetActive(true);                                           // b
+    }
+
+    public void OnMouseExit()
+    {
+        //print("Slingshot:OnMouseExit()");
+        ObjectPoint.SetActive(false);                                          // b
     }
     private void OnMouseOver()
     {
@@ -18,12 +30,5 @@ public class CollectingObject : MonoBehaviour
             gameObject.SetActive(false);
             FirstPageFLBt.SetActive(true);
         }
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

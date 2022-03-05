@@ -16,6 +16,7 @@ using UnityEngine.UI;
 public class PuzzleManager : MonoBehaviour
 {
     public GameObject FL_List_1;
+    public GameObject FL_List_2;
     public GameObject Numbering;
     public InputField playerNameInput;
     public GameObject Cam1;
@@ -27,7 +28,7 @@ public class PuzzleManager : MonoBehaviour
     [HideInInspector]
     public string playerName;
     
-    public void Pan()
+    public void FL_One()
     {
         if (FL_List_1.activeSelf)
         {
@@ -38,7 +39,18 @@ public class PuzzleManager : MonoBehaviour
             FL_List_1.SetActive(true);
         }
     }
-    public void Numb()
+    public void FL_Two()
+    {
+        if (FL_List_2.activeSelf)
+        {
+            FL_List_2.SetActive(false);
+        }
+        else
+        {
+            FL_List_2.SetActive(true);
+        }
+    }
+    public void Num_show()
     {
         if (Numbering.activeSelf)
         {
@@ -49,8 +61,6 @@ public class PuzzleManager : MonoBehaviour
             Numbering.SetActive(true);
         }
     }
-
-
 
     public void SetInput()
     {
