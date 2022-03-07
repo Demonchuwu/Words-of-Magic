@@ -95,7 +95,7 @@ public class PuzzleManager : MonoBehaviour
 
     public void SetInput()
     {
-        playerName = playerNameInput.text; //player's text = player name
+        playerName = playerNameInput.text.ToLower(); //player's text = player name
         Floor(); //run puzzle one
         if (completed_One == true)//if the puzzle one is complete
         {
@@ -126,7 +126,7 @@ public class PuzzleManager : MonoBehaviour
     {
         if (Cam2.activeInHierarchy && playerName == PuzzleTwo) //if camera 2 is active and player input matches puzzletwo
         {
-            Destroy(GameObject.Find("Cube"));//destroy gameobject in game called Cube
+            Destroy(GameObject.FindGameObjectWithTag("RemoveCube"));//destroy gameobject in game called Cube
             playerNameInput.text = "";//reset input text
             completed_Two = true;//complete puzzle two
             MovementBt.SetActive(false);//disable MovementBt

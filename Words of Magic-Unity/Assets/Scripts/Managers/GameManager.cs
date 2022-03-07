@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
 
     [Header("GENERAL SETTINGS")]
     public string gameTitle = "Untitled Game";  //name of the game
-    public string gameCredits = "Made by Me"; //game creator(s)
+    public string gameCredits = "Made by Cristian Misla"; //game creator(s)
     public string copyrightDate = "Copyright " + thisDay; //date cretaed
 
     [Header("GAME SETTINGS")]
