@@ -3,7 +3,7 @@
  * Date Created: Feb 23, 2022
  * 
  * Last Edited by: Cristian Misla
- * Last Edited: Feb 27, 2022
+ * Last Edited: Mar 6, 2022
  * 
  * Description: Check for score update [TESTINGS ONLY]
 ****/
@@ -14,14 +14,13 @@ using UnityEngine;
 //TEST SCRIPT FOR CHECKING SCORE UPDATE
 public class AddPoint : MonoBehaviour
 {
-    public int point = 100; 
+    public float time = 0.00f; 
 
     // Update is called once per frame
     void Update()
     {
+        time += Time.deltaTime;
 
-        if (Input.GetKeyUp("return")) {
-            GameManager.GM.Score = GameManager.GM.Score + point;}
 
     }//end Update()
 }

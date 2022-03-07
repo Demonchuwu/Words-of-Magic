@@ -54,6 +54,8 @@ public class GameManager : MonoBehaviour
     public bool recordHighScore = false; //is the High Score recorded
 
     [SerializeField] //Access to private variables in editor
+
+    private float timeTaken;
     private int defaultHighScore = 0;
     static public int highScore = 0; // the default High Score
     public int HighScore { get { return highScore; } set { highScore = value; } }//access to private variable highScore [get/set methods]
@@ -148,6 +150,8 @@ public class GameManager : MonoBehaviour
 
         }//end if (gameState == gameStates.Playing)
 
+
+
         //Check Score
         CheckScore();
 
@@ -207,7 +211,7 @@ public class GameManager : MonoBehaviour
     
     
     //GO TO THE NEXT LEVEL
-        void NextLevel()
+    public void NextLevel()
     {
         nextLevel = false; //reset the next level
 
