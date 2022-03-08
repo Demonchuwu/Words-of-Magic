@@ -35,7 +35,7 @@ public class Instructions : MonoBehaviour
         ObjectPoint.SetActive(false);//disables the objectpoint
         TextBox.SetActive(false); //disables the text box at the start
     }//end Awake()
-
+    
     public void OnMouseEnter() //method that activates when the mouse enters the collider area
     {
         ObjectPoint.SetActive(true);//enables the objectpoint

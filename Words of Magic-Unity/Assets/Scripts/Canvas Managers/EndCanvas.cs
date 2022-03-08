@@ -30,7 +30,7 @@ public class EndCanvas : MonoBehaviour
         Debug.Log(gm.endMsg);
 
         //Set the Canvas text from GM reference
-        endMsgTextbox.text = gm.endMsg;
+        //endMsgTextbox.text = gm.endMsg;
 
     }
 
