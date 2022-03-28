@@ -137,7 +137,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         //if ESC is pressed , exit game
-        if (Input.GetKey("escape")) { ExitGame(); }
+        //if (Input.GetKey("escape")) { ExitGame(); }
         
         //Check for next level
         if (nextLevel) { NextLevel(); }
