@@ -804,7 +804,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""4015e184-1f86-48c5-8b5c-8cee8efbf209"",
-                    ""path"": ""<Keyboard>/#(/)"",
+                    ""path"": ""<Keyboard>/minus"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
